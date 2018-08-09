@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <h1>All our flats (<%= Flat.count %>)</h1>
+  </div>
+  <div class="row">
+    <p>You found a total of <%= Flat.count %> flats on our website.</p>
+  </div>
+  <div class="row">
+    <% @flats.each do |flat| %>
+    <div class="col-4">
+      <div class="flat-card">
+        <div class="flat-card-image" style="background-image: url('https://picsum.photos/200/300/?random')">Test</div>
+        <div class="flat-card-content">
+          <div class="flat-card-title">
+           <h4> <%= flat.name %> </h4>
+         </div>
+         <p> <%= flat.address %> </p>
+         <div class="flex">
+          <div class="flex">
+           <%= flat.number_of_guests %>
+          </div>
+          <div class="flex">
+           <%= flat.price_per_night %>
+          </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ <% end %>
+
+</div>
+</div>
